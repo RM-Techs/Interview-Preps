@@ -1,0 +1,96 @@
+[200~interview Uestions and answers 
+***************************************
+Q 1 what is ssl redirect:
+ANS:An SSL redirect, also known as an HTTPS redirect, refers to the practice of automatically redirecting web traffic from the insecure HTTP (Hypertext Transfer Protocol) version to the secure HTTPS (Hypertext Transfer Protocol Secure) version. This is commonly done for security reasons to ensure that data transmitted between the user's browser and the website is encrypted and secure.
+An SSL redirect involves configuring a web server to automatically redirect any HTTP requests to the corresponding HTTPS version. This is achieved by setting up rules or configurations that instruct the server to send a redirect response (HTTP status code 301 or 302) to the browser, indicating that the requested resource has moved to a different location (in this case, the secure HTTPS version).
+Q 2  what is SSl termination : 
+ANS: SSL termination refers to the process of terminating the SSL/TLS encryption of a secure connection at a specific point within a network, typically at a load balancer, reverse proxy, or a dedicated SSL termination device. The SSL/TLS termination point is responsible for decrypting incoming secure connections, enabling the transmission of unencrypted data within the internal network.
+SSL termination offers several advantages:
+
+Resource Offloading: SSL termination offloads the resource-intensive task of encrypting and decrypting traffic from backend servers, improving their overall performance.
+
+Centralized Management: SSL termination allows for centralized management of SSL/TLS certificates, making it easier to handle certificate renewals, updates, and security configurations.
+
+Content Inspection: The decrypted traffic can be inspected for malicious content, enabling security measures such as content filtering and threat detection.
+
+Load Balancing: In a load-balanced environment, SSL termination is often performed at the load balancer, allowing for more efficient distribution of traffic among backend servers.
+
+It's important to note that while SSL termination provides benefits in terms of performance and management, organizations must carefully manage the security of the termination point to ensure the confidentiality of decrypted data within their internal networks.
+
+Q3: what is an ssl certificate
+An SSL certificate, or more accurately, an X.509 digital certificate, is a cryptographic key pair consisting of a public key and a private key that is used to secure communication over the Internet. SSL stands for "Secure Sockets Layer," and its successor is TLS ("Transport Layer Security"). SSL certificates play a crucial role in establishing secure connections and ensuring the confidentiality and integrity of data transmitted between a user's web browser and a website's server.
+
+Here are key components and concepts related to SSL certificates:
+
+Public Key Infrastructure (PKI):
+
+SSL certificates are part of the Public Key Infrastructure, a system for managing digital keys and certificates. In the context of SSL/TLS, PKI includes certificate authorities (CAs), registration authorities, and end entities (users, devices, servers).
+Public and Private Keys:
+
+A pair of cryptographic keys is generated: a public key and a private key. The public key is included in the SSL certificate and is used for encrypting data, while the private key is kept secure on the server and is used for decrypting the data.
+Digital Signature:
+
+The certificate includes a digital signature that is generated using the private key of the certificate authority (CA). This signature verifies the authenticity of the certificate, confirming that it has been issued by a trusted CA.
+
+SSL Handshake:
+
+During the SSL/TLS handshake process, the server presents its SSL certificate to the client, and the client verifies the certificate's authenticity. This process ensures that the client is communicating with the legitimate server.
+HTTPS (HTTP Secure):
+
+HTTPS is the secure version of HTTP, where SSL/TLS is used to encrypt the data exchanged between the user's browser and the website. Websites with HTTPS display a padlock icon in the browser's address bar, indicating a secure connection.
+SSL certificates are crucial for securing sensitive information, such as login credentials, personal data, and financial transactions, during online communication. It's important for websites to obtain SSL certificates from trusted CAs and keep them up to date to maintain a secure and trustworthy online presence.
+
+Q4 what do you do to make your aws resources secure
+Firewals hardening
+Iam rules
+Cloud Trail
+Q5 Describe infrastructure set up when using terraform. how will the folder look like
+---terraform configuration file 'written in Htl or json' it declares the desired state of infrastructure specifying resources thier configurations and their dependencies
+--- terraform cli "run command like terraform init,fmt,plan,apply"
+--- terraform state file "its stores the current state of the infrastructure and keep track of changes manage dependencies"
+--- providers " surport the various providers such as aws , azure, gcp etc" interacting with diferent platforms
+---Resources "these are the building blocks of the infrastructure representing the diferent components to be provisioned. such as Vm machines. data bases, networks etc"
+---Modules " they are reusable and sharable units of terraform configurations that alows you to encapsulate and abstract part of your infrastructure making it easier to manage and scale"
+--- variables "they allow you to parameterize your configurations enabling you to customize the bahaviour of you infrastructure making your own configuration more flexible and reusible"
+--- output block "allows you to expose certain values or information from your infrastructure."
+---- Remote backend "it is used to store state files remotely which enables collaboration among team members and provides a centralized location for storing and locking the state"
+---provisioners "they allow you to execute scripts or commands on  remote or local resources after thier creation. they are usually used for task such as bootstrapping instances, or "
+Q6 what is your daily life like
+-check emails, slack and  notification chanels
+-attend standup meeting
+-go back to your tickets
+- project meetings could come up during the day depends on your calender
+- issues can also arise to troubleshoot
+- if given an urgent ticket we need to suspend all less pressing tickets
+
+Q7 How do you make secured in Aws 
+-IAM
+-Virtual Private cloud
+-security groups and network Acl 'acess control list'
+-Data encryption"ssl and Tls SSE'server side encryption, it enable data at rest'
+-monitoring and logging 
+- incidence response and forensic"thats digging deep"
+
+-
+Q8 what will you do if you try to ssh  from 1 linus server to another or from a local environment to a remote server and you have all necesary credentials yet you get no response
+Anns: -Check fore walls
+-check network connectivity
+-review logs
+-recheck the error message
+
+Q9 what scripting language are you familiar with
+Q10 Which cicd tool do you use
+Q11 can you write Docker files
+Q12 Tell me about yourself
+Q13 When you type google on the browser what happens at the backend.
+Ans:  DNS Resolution: Your browser first needs to convert the human-readable domain name "google.com" into an IP address. This process is called DNS resolution. It involves querying a Domain Name System (DNS) server to obtain the IP address associated with the domain.
+
+HTTP Request: Once the IP address is obtained, your browser sends an HTTP (Hypertext Transfer Protocol) request to the server associated with that IP address. The request typically includes information about the type of request (GET, in this case), the resource being requested ("/" for the homepage in this scenario), and other headers.
+
+Server Processing: The server at the IP address associated with "google.com" receives the HTTP request. In Google's case, the server processes the request and generates the appropriate response.
+
+Response from Server: The server sends an HTTP response back to your browser. This response includes the HTML, CSS, JavaScript, and other resources needed to render the Google homepage.
+
+Browser Rendering: Your browser receives the response and begins to render the page. It parses the HTML to understand the structure of the page, fetches additional resources like stylesheets and scripts, and executes any JavaScript code that might be included.
+
+Displaying the Page: Finally, your browser displays the Google homepage on your screen. You can see the search bar, links, and other elements that make up the page.
