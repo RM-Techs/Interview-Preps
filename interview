@@ -1,4 +1,4 @@
-[200~interview Uestions and answers 
+interview Questions and answers 
 ***************************************
 Q 1 what is ssl redirect:
 ANS:An SSL redirect, also known as an HTTPS redirect, refers to the practice of automatically redirecting web traffic from the insecure HTTP (Hypertext Transfer Protocol) version to the secure HTTPS (Hypertext Transfer Protocol Secure) version. This is commonly done for security reasons to ensure that data transmitted between the user's browser and the website is encrypted and secure.
